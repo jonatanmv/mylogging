@@ -65,20 +65,24 @@ log.error("Hello. This is an error !")
 This will create a logfile similar to: ``` logfiles/20200107_myfilename.log ```. Note that the file estension is eliminated.
 
 ### All possible parameters
-An example with all possible parameters:
+An example with all possible parameters you can override. In the example the default values are used.
 ```python
 import logging 
 from MyLogging import MyLog
 
 log = MyLog.get_logger(
-    name=,
-    log_to_console=LOG_TO_CONSOLE,
-    log_to_file=LOG_TO_FILE,
-    log_folder=LOG_FOLDER,
+    name=__name__,
+    log_to_console = False,
+    log_to_file = True,
+    log_folder = 'logfiles',
     log_level = logging.DEBUG,
-    log_format = LOG_FORMAT,
-    log_formatter = LOG_FORMATTER,
-    log_date_format = LOG_DATE_FORMAT,
+    log_date_format = '%Y-%m-%d %H:%m',
+    log_format = '{asctime} [{levelname:5s}] [{name}] {filename:s}:{lineno:d} {message:s}',
+    log_formatter = logging.Formatter(
+        LOG_FORMAT,
+        datefmt=LOG_DATE_FORMAT,
+        style='{'
+    ),
 )
 ```
 
