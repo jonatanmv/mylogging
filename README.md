@@ -76,8 +76,8 @@ log = MyLog.get_logger(
     log_to_file = True,
     log_folder = 'logfiles',
     log_level = logging.DEBUG,
-    log_date_format = '%Y-%m-%d %H:%m',
     log_format = '{asctime} [{levelname:5s}] [{name}] {filename:s}:{lineno:d} {message:s}',
+    log_date_format = '%Y-%m-%d %H:%m',
     log_formatter = logging.Formatter(
         LOG_FORMAT,
         datefmt=LOG_DATE_FORMAT,
