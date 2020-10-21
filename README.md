@@ -8,6 +8,7 @@ Very easy. First, some quick examples so you can start usind this module:
 
 ```python
 import logging
+from MyLogging import MyLog
 log = MyLog.get_logger(
     name=__file__,
     log_level=logging.INFO
