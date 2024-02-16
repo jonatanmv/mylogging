@@ -1,7 +1,7 @@
 # Intro
 
 ## Introduction
-This module is based on the standard logging python module and makes use of it to implement an easy way to log to console and to a file at the same time or only one of them as you prefer.
+This python module is based on the standard logging python module and makes use of it to implement an easy way to log to console and to a file at the same time or only one of them as you prefer.
 
 ## Usage
 Very easy. First, some quick examples so you can start usind this module:

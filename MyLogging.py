@@ -8,12 +8,12 @@ from logging.config import fileConfig
 
 
 class MyLog(object):
-
+    
     # Logging destinations defaults
-    LOG_TO_CONSOLE = True
-    LOG_TO_FILE = True
-    LOG_FOLDER = 'logfiles'
-    NAME = __name__ # Output file will be 'yyyymmdd_NAME.log'
+    LOG_TO_CONSOLE = True   # By default log will output to console
+    LOG_TO_FILE = True      # By default log will output to file
+    LOG_FOLDER = 'logfiles' # By default log folder with logfiles will be 'logfiles'
+    NAME = __name__         # Output file will be 'yyyymmdd_NAME.log'
 
     # Logging Format
     log_level = logging.DEBUG
